@@ -1,49 +1,26 @@
-# Apoorva & Shivam — Wedding Invitation
+# Samkit & Tarushi — Wedding Invitation
 
-A React + Vite wedding invitation website, styled in rose pink and champagne gold. The original opening video, poster, background video and music are retained. The invitation includes an enlarged scratch-to-reveal date card, a family invitation welcome slide, a scroll-guided venue pearl, and a WhatsApp RSVP form.
+A React + Vite wedding invitation website recreated around the supplied mobile reference recording. It includes a preloader, illustrated envelope entry, portrait opening video, parents' video section, countdown, scratch-to-reveal couple photo with celebratory bursts, four event videos in the requested order, and a WhatsApp RSVP form.
 
 ## Run locally
 
 ```bash
-npm ci
+npm install
 npm run dev
 ```
 
-Create a production build with:
+Production build:
 
 ```bash
 npm run build
 ```
 
-## Deploy to GitHub Pages
+## Replaceable media
 
-1. Upload the **contents of this project folder** to the root of your GitHub repository (so `package.json`, `index.html`, `src/`, `public/` and `.github/` are at repository root).
-2. Make sure the default branch is `main`.
-3. In GitHub, open **Settings → Pages** and set **Build and deployment → Source** to **GitHub Actions**.
-4. Push the project to `main`, or manually run the workflow from the **Actions** tab.
-5. The workflow installs dependencies, builds the Vite site into `dist/`, and deploys that build folder to GitHub Pages.
+See [`ASSET-GUIDE.txt`](./ASSET-GUIDE.txt) for exact filenames. Add the four event videos in this order: Mehendi, Hathbhara & Haldi, Sangeet, Wedding. All videos should be 9:16 portrait MP4 files.
 
-The Vite configuration automatically uses the repository subpath for GitHub Pages project sites and `/` for `username.github.io` sites. Do not manually hardcode the repository name in `vite.config.js`.
+The opening video is prepared before the invitation envelope appears. The remaining videos use staged, proximity-based preloading rather than downloading every large file at startup.
 
-## Replace event artwork
+## RSVP
 
-Add your five vertical 9:16 event images to `public/assets/events/` using these exact names:
-
-- `satsang.jpg`
-- `mehendi.jpg`
-- `haldi.jpg`
-- `sangeet.jpg`
-- `wedding.jpg`
-
-The gallery displays them in that order, in rounded rectangular frames. Text should be embedded in the artwork; the website intentionally adds no event captions. If an image has not been added yet, its softly styled rounded placeholder remains visible.
-
-## Existing media retained
-
-- `public/assets/opening.mp4`
-- `public/assets/opening-poster.jpg`
-- `public/assets/background.mp4`
-- `public/music/track1.mp3`
-
-## Personalisation
-
-Wedding names, dates, venue links and RSVP number are configured in `src/constants/weddingData.js`. The RSVP form sends Guest Name, Phone Number, Number of Guests, Attendance and Message to the supplied WhatsApp number.
+The RSVP form sends the guest's details to WhatsApp number +91 79082 82160. A connected form backend can be added later if you want responses stored rather than sent through WhatsApp.
