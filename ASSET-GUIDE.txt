@@ -1,0 +1,28 @@
+SAMKIT & TARUSHI WEDDING WEBSITE — ASSET GUIDE
+
+Required media paths (place files exactly here):
+public/assets/entry-image.jpg          Entry image shown before the first tap
+public/assets/opening-video.mp4        Opening video played after the first tap
+public/assets/wedding-logo.jpeg        Supplied Samkit & Tarushi logo (already included)
+public/assets/music/wedding-music.mp3  Background music (existing track copied in)
+
+Event video files to add:
+public/assets/events/mehndi.mp4
+public/assets/events/haldi.mp4
+public/assets/events/sangeet.mp4
+public/assets/events/sehrabandi.mp4
+public/assets/events/reassembly.mp4
+public/assets/events/wedding.mp4
+
+Current ZIP contains the entry image, opening video, supplied logo, and music.
+The six event videos were not present in the supplied codebase and are placeholders until supplied.
+
+Run locally:
+1. Install Node.js (LTS).
+2. Run: npm install
+3. Run: npm run dev
+4. For production: npm run build
+
+Note: Video preload currently preloads the opening video before entering the invitation.
+Once the event videos are added, the preloader can be extended to preload them in a staged,
+mobile-friendly way; downloading every full-length video before entry can be slow and memory-heavy.
